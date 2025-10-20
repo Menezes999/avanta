@@ -1,5 +1,3 @@
-/* O CSS permanece o mesmo, pois o erro era apenas no texto, não no estilo. */
-
 /* Variáveis para cores */
 :root {
     --color-white: #FFFFFF;
@@ -22,7 +20,7 @@ body {
     background-color: var(--color-dark-bg);
     
     /* Configuração da imagem de fundo */
-    background-image: url('background-game.jpg'); /* Nomeie sua imagem de fundo do jogo como 'background-game.jpg' */
+    background-image: url('background-game.jpg'); /* Agora aponta para a imagem gerada */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,22 +51,14 @@ body::before {
 /* --- Header/Logo --- */
 .logo-container {
     align-self: flex-start; /* Alinha o logo no canto superior esquerdo */
-    display: flex;
-    align-items: center;
     padding: 30px 40px;
-    font-weight: bold;
-    font-size: 24px;
 }
 
-.logo-text {
-    font-size: 40px;
-    line-height: 1;
-    margin-right: 5px;
+.avanta-logo-header {
+    height: 35px; /* Ajuste a altura conforme necessário para combinar com a imagem original */
+    width: auto;
 }
 
-.logo-name {
-    font-size: 20px;
-}
 
 /* --- Main Content (Texto e Botão) --- */
 .content-area {
@@ -112,29 +102,12 @@ body::before {
     padding: 30px 40px;
 }
 
-.icon-group {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    border: 1px solid var(--color-white);
-    border-radius: 50px; /* Borda arredondada para o grupo de ícones */
+.avanta-logo-footer {
+    height: 60px; /* Ajuste a altura conforme necessário */
+    width: auto;
+    /* A imagem já deve ter a borda arredondada se gerada corretamente */
 }
 
-.icon {
-    font-size: 25px;
-    line-height: 1;
-    padding: 0 5px;
-}
-
-.clock-icon {
-    margin-right: 15px;
-    font-size: 30px;
-}
-
-.avanta-icon {
-    font-size: 30px;
-    font-weight: bold;
-}
 
 /* Responsividade básica */
 @media (max-width: 768px) {
@@ -148,5 +121,13 @@ body::before {
 
     .footer-icons {
         padding: 20px;
+    }
+
+    .avanta-logo-header {
+        height: 30px; /* Ajuste para telas menores */
+    }
+
+    .avanta-logo-footer {
+        height: 50px; /* Ajuste para telas menores */
     }
 }

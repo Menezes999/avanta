@@ -48,7 +48,7 @@ body::before {
 }
 
 
-/* --- Header/Logo --- */
+/* --- Header/Logo (Canto Esquerdo) --- */
 .logo-container {
     /* Alinha o logo no canto superior esquerdo */
     align-self: flex-start; 
@@ -57,8 +57,8 @@ body::before {
 }
 
 .avanta-logo-header {
-    /* *** AJUSTE DE TAMANHO FEITO AQUI *** */
-    height: 50px; /* Aumentado de 35px para 50px */
+    /* *** AJUSTE DE TAMANHO FEITO AQUI: AUMENTADO PARA 70px *** */
+    height: 70px; 
     width: auto;
 }
 
@@ -129,7 +129,7 @@ body::before {
     }
 
     .avanta-logo-header {
-        height: 40px; /* Ajuste para telas menores */
+        height: 50px; /* Ajuste a altura responsiva */
     }
 
     .avanta-logo-footer {

@@ -4,7 +4,7 @@
     --color-dark-bg: #222222; /* Cor de fundo aproximada do overlay */
     --color-btn-bg: #FFFFFF;
     --color-btn-text: #000000;
-    --font-family: 'Arial', sans-serif; /* Use uma fonte mais moderna como 'Poppins' ou 'Montserrat' se estiver disponível */
+    --font-family: 'Arial', sans-serif; 
 }
 
 /* Reset básico e corpo */
@@ -20,22 +20,22 @@ body {
     background-color: var(--color-dark-bg);
     
     /* Configuração da imagem de fundo */
-    background-image: url('background-game.jpg'); /* Agora aponta para a imagem gerada */
+    background-image: url('background-game.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* Overlay escuro para fazer o texto sobressair, como na imagem */
+    /* Configuração de Layout Flex para alinhar cabeçalho e rodapé */
     position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Para colocar o header no topo e o footer embaixo */
+    justify-content: space-between; 
     align-items: center;
     text-align: center;
 }
 
-/* Adiciona o overlay escuro sobre a imagem */
+/* Adiciona o overlay escuro sobre a imagem para escurecer o fundo */
 body::before {
     content: '';
     position: absolute;
@@ -43,19 +43,22 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Ajuste a opacidade para o nível de escuridão desejado */
+    background: rgba(0, 0, 0, 0.7); 
     z-index: -1; /* Fica atrás do conteúdo */
 }
 
 
 /* --- Header/Logo --- */
 .logo-container {
-    align-self: flex-start; /* Alinha o logo no canto superior esquerdo */
+    /* Alinha o logo no canto superior esquerdo */
+    align-self: flex-start; 
     padding: 30px 40px;
+    z-index: 10; 
 }
 
 .avanta-logo-header {
-    height: 35px; /* Ajuste a altura conforme necessário para combinar com a imagem original */
+    /* Estilo para a imagem do logotipo de cima */
+    height: 35px; /* Tamanho ajustado para o logo "Avanta" */
     width: auto;
 }
 
@@ -68,14 +71,15 @@ body::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .main-title {
     font-size: 55px;
-    font-weight: 900; /* Extra bold */
+    font-weight: 900; 
     line-height: 1.1;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil para destaque */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 /* --- Botão --- */
@@ -87,7 +91,7 @@ body::before {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    border-radius: 5px; /* Levemente arredondado */
+    border-radius: 5px; 
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -100,12 +104,13 @@ body::before {
 /* --- Footer Ícones --- */
 .footer-icons {
     padding: 30px 40px;
+    z-index: 10; 
 }
 
 .avanta-logo-footer {
-    height: 60px; /* Ajuste a altura conforme necessário */
+    /* Estilo para a imagem dos ícones de rodapé (Relógio + A) */
+    height: 55px; 
     width: auto;
-    /* A imagem já deve ter a borda arredondada se gerada corretamente */
 }
 
 
@@ -124,10 +129,10 @@ body::before {
     }
 
     .avanta-logo-header {
-        height: 30px; /* Ajuste para telas menores */
+        height: 30px; 
     }
 
     .avanta-logo-footer {
-        height: 50px; /* Ajuste para telas menores */
+        height: 50px; 
     }
 }

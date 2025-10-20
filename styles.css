@@ -1,0 +1,152 @@
+/* O CSS permanece o mesmo, pois o erro era apenas no texto, não no estilo. */
+
+/* Variáveis para cores */
+:root {
+    --color-white: #FFFFFF;
+    --color-dark-bg: #222222; /* Cor de fundo aproximada do overlay */
+    --color-btn-bg: #FFFFFF;
+    --color-btn-text: #000000;
+    --font-family: 'Arial', sans-serif; /* Use uma fonte mais moderna como 'Poppins' ou 'Montserrat' se estiver disponível */
+}
+
+/* Reset básico e corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--color-white);
+    background-color: var(--color-dark-bg);
+    
+    /* Configuração da imagem de fundo */
+    background-image: url('background-game.jpg'); /* Nomeie sua imagem de fundo do jogo como 'background-game.jpg' */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Overlay escuro para fazer o texto sobressair, como na imagem */
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para colocar o header no topo e o footer embaixo */
+    align-items: center;
+    text-align: center;
+}
+
+/* Adiciona o overlay escuro sobre a imagem */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Ajuste a opacidade para o nível de escuridão desejado */
+    z-index: -1; /* Fica atrás do conteúdo */
+}
+
+
+/* --- Header/Logo --- */
+.logo-container {
+    align-self: flex-start; /* Alinha o logo no canto superior esquerdo */
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 40px;
+    line-height: 1;
+    margin-right: 5px;
+}
+
+.logo-name {
+    font-size: 20px;
+}
+
+/* --- Main Content (Texto e Botão) --- */
+.content-area {
+    /* Centraliza o conteúdo principal verticalmente no meio da tela */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-size: 55px;
+    font-weight: 900; /* Extra bold */
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil para destaque */
+}
+
+/* --- Botão --- */
+.download-btn {
+    background-color: var(--color-btn-bg);
+    color: var(--color-btn-text);
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px; /* Levemente arredondado */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* --- Footer Ícones --- */
+.footer-icons {
+    padding: 30px 40px;
+}
+
+.icon-group {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border: 1px solid var(--color-white);
+    border-radius: 50px; /* Borda arredondada para o grupo de ícones */
+}
+
+.icon {
+    font-size: 25px;
+    line-height: 1;
+    padding: 0 5px;
+}
+
+.clock-icon {
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.avanta-icon {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 40px;
+    }
+
+    .logo-container {
+        padding: 20px;
+    }
+
+    .footer-icons {
+        padding: 20px;
+    }
+}
